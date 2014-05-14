@@ -1,0 +1,11 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+{% if latest_poll_list %}
+    <ul>
+    {% for todo_list in all_todo_lists %}
+        <li><a href="">{{ todo_list.content }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No  todolists are available.</p>
+{% endif %}
